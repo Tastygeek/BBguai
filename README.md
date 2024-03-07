@@ -44,7 +44,7 @@ Contributions are welcome! If you have ideas for improvements or encounter any i
 
 ## License
 
-BBguai is released under the ISC license. See the LICENSE file for more details.
+BBguai is released under the MIT license. See the LICENSE file for more details.
 
 ## Acknowledgements
 
