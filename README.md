@@ -1,14 +1,38 @@
-# BBguai
-BBguai is a cutting-edge component designed for the Solana ecosystem, offering rapid and convenient insights into Solana wallet activities. This powerful tool enables users to input a Solana wallet address and instantly receive a comprehensive analysis, including the wallet's age, active years, active months, active days, total number of transactions, and the count of interacted contracts.
+BBguai - Blockchain Wallet BaZi Calculator
+Introduction
+BBguai is a novel npm package designed to bridge the ancient wisdom of Chinese astrology with the modern world of cryptocurrency. It uniquely calculates the Chinese Zodiac, also known as BaZi or the Four Pillars of Destiny, based on the first active time of cryptocurrency wallets. This innovative tool supports Bitcoin (BTC), Ethereum (ETH), and Solana (SOL) wallets, offering users and developers alike a fresh perspective on their digital assets.
 
-Key Features:
+Features
+Support for Multiple Blockchains: Calculate the BaZi for wallets on Bitcoin, Ethereum, and Solana networks.
+First Active Time Detection: Determines a wallet's "birth time" by querying its first transaction on the blockchain.
+Chinese Zodiac Calculation: Utilizes the wallet's first active time to calculate its corresponding BaZi, providing insights into its character and potential fortunes.
+Usage
+BBguai is easy to integrate into your existing JavaScript projects. After installing the package, you can simply import it and start querying the BaZi of various cryptocurrency wallets.
 
-Wallet Age: Discover how long the wallet has been active within the Solana ecosystem.
-Activity Insights: Gain detailed insights into the wallet's activity, broken down by years, months, and days.
-Transaction Count: Understand the wallet's engagement level through the total number of transactions.
-Contract Interactions: Find out the number of unique contracts the wallet has interacted with, highlighting its diversification and reach.
-Ideal for: Cryptocurrency enthusiasts, researchers, analysts, and developers seeking in-depth understanding of wallet activities on the Solana blockchain.
+Installation
+bash
+Copy code
+npm install bbguai
+Example
+javascript
+Copy code
+const bbguai = require('bbguai');
 
-Get Started: To use BBguai, simply input a Solana wallet address. The tool takes care of the rest, fetching and analyzing blockchain data to provide you with valuable insights.
+async function displayWalletBaZi(walletAddress, blockchainType) {
+    try {
+        const bazhi = await bbguai.getWalletBirthChart(walletAddress, blockchainType);
+        console.log(bazhi);
+    } catch (error) {
+        console.error("Failed to calculate wallet's BaZi:", error);
+    }
+}
 
-Embrace the future of Solana analytics with BBguai – your go-to tool for comprehensive wallet insights.
+displayWalletBaZi('YourWalletAddressHere', 'ETH');
+Contributing
+Contributions are welcome! If you have ideas for improvements or encounter any issues, please feel free to open an issue or submit a pull request on GitHub.
+
+License
+BBguai is released under the ISC license. See the LICENSE file for more details.
+
+Acknowledgements
+This project was created by Tastygeek. Special thanks to the open-source community and the various APIs that made this project possible.
